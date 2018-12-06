@@ -1,6 +1,10 @@
+/** Advanced JS - Building a Weather App With Node Tutorial https://codeburst.io/build-a-weather-website-in-30-minutes-with-node-js-express-openweather-a317f904897b **/
+
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
+
+var weather;
 
 
 app.set('view engine', 'ejs') // requiring the ejs templating engine that we installed
@@ -12,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // using the body parser tha
 app.get('/', function (req, res) {   // the slash means that we are exclusivley focusing on the / url.
 	//res.send('Hello World!') //og code -prints "hello world" onto the screnn
 	res.render('index'); //new code - res.render will render the view of the index.ejs file and render it into html that the browser/client can read. 
-
 })
 
 //creates a server
@@ -33,7 +36,7 @@ app.post('/', function (req, res) {
 request(url, function (err, response, body) {
     if(err){ //error message - make sure the API is working
       res.render('index', {weather: null, error: 'Error, please try again'});
-    } else { //now that we don;t have an API 
+    } else { //now that we don't have an API 
       let weather = JSON.parse(body) //parse JSON from API into usable JS
       if(weather.main == undefined){ //if what they typed in isn't a city
         res.render('index', {weather: null, error: 'Error, please try again'});

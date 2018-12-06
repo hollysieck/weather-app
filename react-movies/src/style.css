@@ -1,0 +1,203 @@
+h1 {
+    font-family: Vidaloka;
+    color: #2b4558;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
+}
+
+h2 {
+    font-family: Vidaloka;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+}
+
+h3 {
+  font-family: Open Sans;
+  font-size: 10px;
+  letter-spacing: 2.1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+}
+
+p {
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.42;
+    text-align: left;
+    color: #a1a0a0;
+}
+
+.preview-rectangle {
+  background-repeat: no-repeat;
+  background-position: cover;
+  border-radius: 10px;
+  width: 364px;
+  height: 177px;
+  position: relative;
+  margin: 25px 0;
+}
+
+.container {
+    margin: 83px auto;
+    display: block;
+    width: 1234px;
+}
+/*button {
+  border-radius: 5px;
+  background-color: #7ba593;
+  font-family: Open Sans;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  margin: 25px 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+button:hover {
+    background-color: #537265;
+  }
+*/
+button {
+    border: 0;
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+}
+	
+.title {
+    margin: 25px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    text-shadow: 0px 0px 10px black;
+}
+
+.preview-rectangle img { 
+    border-radius: 10px;
+}
+
+/** Expanded Card **/
+
+.information {
+    margin: 25px 15px;
+}
+
+.large-card {
+  width: 829px;
+  height: auto;
+  border-radius: 10px;
+  border: solid 1px #efefef;
+  background-color: #ffffff;
+  margin: 25px 0;
+}
+
+.large-title {
+  font-family: Vidaloka;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.rating {
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.5px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.movie-info {
+  margin-top: 25px;
+}
+
+.x-close {
+  border: solid 1px #ffffff;
+  background-color: #000000;
+}
+	
+.inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
+.margin-right{
+    margin-right: 35px;
+}
+
+.large-image {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Open Sans;
+    color: white;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 25px; 
+    cursor: pointer;
+}
+.close:hover {
+    opacity: .5 !important;
+}
+  
+.preview-rectangle:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    border-radius: 10px;
+    background-color: black;
+  }
+  
+.preview-rectangle:hover:after  { 
+    opacity: .5;  
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+.large-image img { 
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 1200px) {
+    .large-card { 
+        width: 100%
+    }
+    .container {
+        width: auto;
+    }
+    .preview-rectangle {
+        display: inline-block;
+    }
+    .margin-right {
+        width: 100%;
+        margin:0;
+    }
+}
